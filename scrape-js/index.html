@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>scrape.js | Pagehop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="http://api.pagehopapp.com/scrape-js/index.html">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link rel="alternate" href="/atom.xml" title="Documentation | Pagehop">
+  <meta name="description" content="What does it do?The scrape.js script is responsible for extracting data from pages. The script expects a specific html rendering, from which it extracts search results or another type of data that you">
+<meta property="og:type" content="website">
+<meta property="og:title" content="scrape.js">
+<meta property="og:url" content="http://api.pagehopapp.com/scrape-js/index.html">
+<meta property="og:site_name" content="Documentation | Pagehop">
+<meta property="og:description" content="What does it do?The scrape.js script is responsible for extracting data from pages. The script expects a specific html rendering, from which it extracts search results or another type of data that you">
+<meta property="og:image" content="http://api.pagehopapp.com/logo.png">
+<meta property="og:updated_time" content="2014-09-04T14:59:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="scrape.js">
+<meta name="twitter:description" content="What does it do?The scrape.js script is responsible for extracting data from pages. The script expects a specific html rendering, from which it extracts search results or another type of data that you">
+<meta name="twitter:image" content="http://api.pagehopapp.com/logo.png">
+<meta name="twitter:site" content="@pagehopapp">
+
+  <!-- Bootstrap Core CSS -->
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom theme CSS -->
+<link href="/pagehopapp-styles/main.css" rel="stylesheet">
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53791435-1', 'api.pagehopapp.com');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand page-scroll-no-offset" href="#page-top" tabIndex="1">
+				<img class="header-logo" src="/img/favicon.ico">
+				Pagehop
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li>
+					<a href="http://pagehopapp.com"><i class="fa fa-arrow-left"></i></a>
+				</li>
+				<!-- <li>
+					<a href="http://pagehopapp.com/buy">Buy</a>
+				</li> -->
+				<li>
+					<a href="http://api.pagehopapp.com">API</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@pagehop">Blog</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+  <article class="page" itemscope itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="page-title-outer-container">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Documentation: scrape.js</h1>
+        <a href="https://github.com/pagehop/api.pagehopapp.com/blob/master/source/scrape-js.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+    <div class="page-content">
+      <div class="toc-wrap">
+        <strong class="toc-title">Contents</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#What-does-it-do"><span class="toc-number">1.</span> <span class="toc-text">What does it do?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-use-external-libs"><span class="toc-number">2.</span> <span class="toc-text">How to use external libs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-long-can-it-run"><span class="toc-number">3.</span> <span class="toc-text">How long can it run?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-if-it-fails"><span class="toc-number">4.</span> <span class="toc-text">What if it fails?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Examples"><span class="toc-number">5.</span> <span class="toc-text">Examples</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pagehop-API-scrape-js"><span class="toc-number">6.</span> <span class="toc-text">pagehop API (scrape.js)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pagehop-init-query-options-max"><span class="toc-number">6.1.</span> <span class="toc-text">pagehop.init(query, options, max)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pagehop-getMaxCount"><span class="toc-number">6.2.</span> <span class="toc-text">pagehop.getMaxCount()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pagehop-getQuery"><span class="toc-number">6.3.</span> <span class="toc-text">pagehop.getQuery()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pagehop-getOptions"><span class="toc-number">6.4.</span> <span class="toc-text">pagehop.getOptions()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pagehop-finish-results"><span class="toc-number">6.5.</span> <span class="toc-text">pagehop.finish( results )</span></a></li></ol></li></ol>
+      </div>
+      <div class="page-entry" itemprop="articleBody">
+        <h1 id="What-does-it-do"><a href="#What-does-it-do" class="headerlink" title="What does it do?"></a>What does it do?</h1><p>The scrape.js script is responsible for extracting data from pages. The script expects a specific html rendering, from which it extracts search results or another type of data that your recipe produces.</p>
+<p>Once the page-loop.js determines a url for scraping, it can execute the scrape.js script on this url, using the pagehop.scrape(…) method. The way this happens is: the url is loaded in a page of the headless (no view rendering) browser, PhantomJS and then the scrape.js script is executed in this same page instance.</p>
+<p>Your recipe might not use a scrape script. If you don’t need to load the page in a browser (you don’t need any scripts to load, content to show-up on an ajax call etc.), you can make requests from the page-loop as well as parse the returned html and scrape results.</p>
+<p>Still, you shouldn’t forget:</p>
+<escape><blockquote class="note warn"><strong class="note-title">Always put a scrape.js file in your recipe</strong></blockquote></escape>
+
+Even when it's empty, the scrape.js file is still required to exist. If you use the pagehop CLI tool for scaffolding, you will always get the file created for you.
+
+<escape></escape>
+
+<h1 id="How-to-use-external-libs"><a href="#How-to-use-external-libs" class="headerlink" title="How to use external libs"></a>How to use external libs</h1><p>We’ve built the project structure mimicking the npm module.</p>
+<p>As any other module you can use all npm modules as devDependencies for testing purposes (your tests will practically be executed in NodeJS).</p>
+<p><strong>Browserify</strong> is used <em>under the hood</em>, so you can take advantage of the increasingly growing range of npm modules that “play well” with browserify, and use these packages as <strong>actual dependencies, inside your scripts</strong>. If you haven’t done that already, please, go through the documentation of <a href="http://browserify.org/" target="_blank" rel="noopener">browserify</a> to see what you can(‘t) do in such a script.</p>
+<p>Besides using node packages, scrape.js has an access to the <strong>pagehop</strong> global object, which tells you what options did the user selected of your recipe, what was her/his query, how many results can you return and so on.</p>
+<p>Before running the scrape.js script, the <code>pagehop</code> global object is created, which is similar for both of the scripts (page-loop.js and scrape.js), yet, a bit different.</p>
+<h1 id="How-long-can-it-run"><a href="#How-long-can-it-run" class="headerlink" title="How long can it run?"></a>How long can it run?</h1><p>Your recipe will timeout after <strong>30 seconds</strong>. Scrape can’t go for longer than <strong>10 seconds</strong> (including loading the url), if it does, the callback in page-loop.js’s call to pagehop.scrape() will return an error with type prop “timeout”.</p>
+<h1 id="What-if-it-fails"><a href="#What-if-it-fails" class="headerlink" title="What if it fails?"></a>What if it fails?</h1><p>If scarpe.js has a syntax error or fails during runtime - your page-loop’s scrape callback will receive an error with type and message properties.</p>
+<h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><p>Here is an example for a scrape.js script. This is from the BingSearch recipe.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getDomain = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> matches = url.match(<span class="regexp">/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i</span>);</span><br><span class="line">    <span class="keyword">return</span> ( matches &amp;&amp; matches[<span class="number">1</span>] ) ? matches[<span class="number">1</span>] : <span class="string">""</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> items = <span class="built_in">document</span>.querySelectorAll(<span class="string">"#b_results&gt;li:not(.b_pag)"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> item = items[i],</span><br><span class="line">        link = item.querySelector( <span class="string">"h2 a"</span> );</span><br><span class="line">    <span class="keyword">if</span> ( link ) &#123;</span><br><span class="line">        <span class="keyword">var</span> displayAddress = item.querySelector(<span class="string">".b_snippet&gt;p"</span>) || item.querySelector(<span class="string">".b_caption&gt;p"</span>);</span><br><span class="line">        displayAddress = displayAddress ? displayAddress.textContent : link.href;</span><br><span class="line"></span><br><span class="line">        result.push( &#123;</span><br><span class="line">            text: link.text + <span class="string">" ("</span> + getDomain( link.href ) + <span class="string">")"</span>,</span><br><span class="line">            address: link.href,</span><br><span class="line">            displayAddress: displayAddress,</span><br><span class="line">            tooltip: displayAddress</span><br><span class="line">        &#125; );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pagehop.finish( result );</span><br></pre></td></tr></table></figure>
+<p>Let’s see what is the complete API of the pagehop global object</p>
+<h1 id="pagehop-API-scrape-js"><a href="#pagehop-API-scrape-js" class="headerlink" title="pagehop API (scrape.js)"></a>pagehop API (scrape.js)</h1><p>All data obtained from getter methods is immutable.</p>
+<h2 id="pagehop-init-query-options-max"><a href="#pagehop-init-query-options-max" class="headerlink" title="pagehop.init(query, options, max)"></a>pagehop.init(query, options, max)</h2><p>This method is used by Pagehop, to preset the environment for running your scrape.js</p>
+<p>You can use this method only in your tests, where the test framework doesn’t call init automatically.</p>
+<p>Lets go through the params:</p>
+<ul>
+<li><strong>query</strong> - <strong>string</strong>, recipe’s query as parsed by Pagehop.</li>
+<li><strong>options</strong> - <strong>array</strong>, holding all options parsed from the pagehop query.</li>
+<li><strong>max</strong> - integer, &gt;=10, the maximal number of results that can be returned by the recipe.</li>
+</ul>
+<h2 id="pagehop-getMaxCount"><a href="#pagehop-getMaxCount" class="headerlink" title="pagehop.getMaxCount()"></a>pagehop.getMaxCount()</h2><p>Returns an <strong>integer</strong>. Although page-loop.js has an access to this prop, for convenience, we make it available in scrape.js, too. For example, when you always scrape 1 page (virtual scrolling etc.) you need to know how many items to return in the scrape.js.</p>
+<h2 id="pagehop-getQuery"><a href="#pagehop-getQuery" class="headerlink" title="pagehop.getQuery()"></a>pagehop.getQuery()</h2><p>Returns a <strong>string</strong>. Returns the recipe query as parsed by Pagehop.</p>
+<p>This doesn’t include the whole pagehop query - e.g. in <code>g &lt;this is the query&gt; :r $.*^</code> the parsed query will be <code>&lt;this is the query&gt;</code>.</p>
+<h2 id="pagehop-getOptions"><a href="#pagehop-getOptions" class="headerlink" title="pagehop.getOptions()"></a>pagehop.getOptions()</h2><p>Returns an <strong>array</strong> of strings.</p>
+<p>Tools or non-recognized options will not be passed in here - e.g. <code>h :s :asdf</code> will produce only [“:s”] for options (“:s” is for Show HN posts with HackerNews recipe).</p>
+<h2 id="pagehop-finish-results"><a href="#pagehop-finish-results" class="headerlink" title="pagehop.finish( results )"></a>pagehop.finish( results )</h2><ul>
+<li><strong>results</strong> - <strong>array</strong> of result objects.</li>
+</ul>
+<p>When your scrape is ready, you can return the results it has obtained with pagehop.finish( results ).</p>
+<p>Result’s format is entirely under your control (pagehop.finish( results ) in the page-loop.js should follow a scheme, though. Make sure to check that out).</p>
+
+      </div>
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2014-09-04T14:59:23.000Z" itemprop="dateModified">Last updated: Sep 4 2014</time>
+        <a href="/page-loop-js/" id="page-footer-prev" title="page-loop.js">Prev</a><a href="/testing-recipes/" id="page-footer-next" title="Testing">Next</a>
+      </footer>
+      
+    </div>
+    <aside id="sidebar">
+  
+    <strong class="sidebar-title">How to use</strong>
+    
+      <a href="/" class="sidebar-link">Install</a>
+    
+      <a href="/overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/register-with-license-key/" class="sidebar-link">Register with License-key</a>
+    
+      <a href="/search/" class="sidebar-link">Search</a>
+    
+      <a href="/page-hopping/" class="sidebar-link">Page-hopping</a>
+    
+      <a href="/docs-browsing/" class="sidebar-link">Docs Browsing</a>
+    
+      <a href="/reading-news/" class="sidebar-link">Reading News</a>
+    
+      <a href="/quick-info/" class="sidebar-link">Quick Info</a>
+    
+      <a href="/3rd-party-recipes-and-tools/" class="sidebar-link">3rd party Recipes and Tools</a>
+    
+  
+    <strong class="sidebar-title">Development</strong>
+    
+      <a href="/development-overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/ecma-script/" class="sidebar-link">ECMAScript</a>
+    
+      <a href="/external-dependencies/" class="sidebar-link">External Dependencies</a>
+    
+  
+    <strong class="sidebar-title">Develop Recipes</strong>
+    
+      <a href="/scaffold-recipe/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-recipe/" class="sidebar-link">package.json</a>
+    
+      <a href="/page-loop-js/" class="sidebar-link">page-loop.js</a>
+    
+      <a href="/scrape-js/" class="sidebar-link current">scrape.js</a>
+    
+      <a href="/testing-recipes/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Develop Tools</strong>
+    
+      <a href="/scaffold-tool/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-tool/" class="sidebar-link">package.json</a>
+    
+      <a href="/tool-js/" class="sidebar-link">tool.js</a>
+    
+      <a href="/testing-tools/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Used Software</strong>
+    
+      <a href="/used-software/" class="sidebar-link">Licenses</a>
+    
+  
+    <strong class="sidebar-title">Misc</strong>
+    
+      <a href="/releases/" class="sidebar-link">Release History</a>
+    
+      <a href="/faq/" class="sidebar-link">F.A.Q.</a>
+    
+  
+</aside>
+  </div>
+</article>
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright &copy; <a href="http://universless.com">Universless Ltd.</a> 2015-2018</span>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline social-buttons">
+					<li><a href="http://twitter.com/pagehopapp"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a href="http://facebook.com/pagehop"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li><a href="mailto:support@pagehopapp.com"><i class="fa fa-envelope"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline quicklinks">
+					<li>
+						<a href="#" data-target="#privacyPolicyModal" data-keyboard="true" data-toggle="modal">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#" data-target="#eulaModal" data-keyboard="true" data-toggle="modal">EULA</a>
+					</li>
+					<li>
+						<a href="http://pagehopapp.com/press">Press</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Modals -->
+<!-- PrivacyPolicy Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>Privacy Policy</h1>
+
+						<h2>The information you provide to us</h2>
+						<p>We take your privacy seriously. When you provide us with any personal information, we do our best to keep it safe. We will not share your personal information with third-parties other than our payment gateway and will take all reasonable precautions to protect it.</p>
+
+						<p>Braintree Payments (our payment gateway) will be the only party receiving your payment data in case you purchase a license for Pagehop. Our servers will not receive any of this data, other than your email, your name and the text of your License Key (the one you receive through email upon purchase) in order to be able to resend you your License Key in case it's lost. Universless Ltd. is not and will not be responsible nor held liable for any security issues that Braintree Payments gateway has or will have in future.</p>
+
+						<h2>Tracking and cookies</h2>
+						<p>To help us understand how we can make Pagehop's website better, we use Google Analytics on pagehopapp.com, as well as on api.pagehopapp.com.</p>
+
+						<p>This information is anonymous and does not provide us with identifiable information, but helps us ensure that our documentation pages answer all of the most popular questions correctly, for example.</p>
+
+						<hr style="width:60%">
+						<i>
+							<p>By using the websites owned by Universless Ltd. (including pagehopapp.com, www.pagehopapp.com and api.pagehopapp.com), you agree to the Privacy Policy above.</p>
+
+							<p>If you have any questions about our privacy policy, please contact us on support@pagehopapp.com.</p>
+						</i>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EULA Modal -->
+<div class="modal fade" id="eulaModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>End-user license agreement (EULA)</h1>
+
+						<p>The SOFTWARE PRODUCT (PAGEHOP) is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.
+						</p>
+						<ol>
+							<li>LICENSES<br>
+							PAGEHOP is licensed as follows:
+
+								<ol type="a">
+									<li>Installation and Usage.<br>
+										Licenses are per user and valid for use on all supported operating systems. License keys may be used on multiple computers and operating systems, provided the license key holder is the primary user.
+									</li>
+									<li>Backup Copies.<br>
+										You may make copies of the license key and or PAGEHOP for backup and archival purposes.
+									</li>
+								</ol>
+
+							</li>
+							<li>DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+								<ol type="a">
+									<li>Maintenance of Copyright Notices.<br>
+										You must not remove or alter any copyright notices on any copy of PAGEHOP.
+									</li>
+									<li>Distribution.<br>
+										You may not distribute or sell license keys or PAGEHOP to third parties. Licenses will be revoked if distributed or sold to third parties.
+									</li>
+									<li>Rental.<br>
+										You may not rent, lease, or lend the license key or PAGEHOP.
+									</li>
+								</ol>
+
+							</li>
+							<li>COPYRIGHT<br>
+								All title, including but not limited to copyrights, in and to PAGEHOP and any copies thereof are owned by UNIVERSLESS LTD.
+							</li>
+							<li>NO WARRANTIES<br>
+								UNIVERSLESS LTD expressly disclaims any warranty for PAGEHOP, which is provided 'as is' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, non-infringement, or fitness of a particular purpose.
+
+							</li>
+							<li>REFUNDS<br>
+								Refunds are available within 10 days of purchasing. Please send us an email (support@pagehopapp.com) if you wish to claim a refund. Refund can't be claimed after the first 10 days.
+							</li>
+							<li>LIMITATION OF LIABILITY<br>
+								In no event shall UNIVERSLESS LTD be liable for any damages due to use of PAGEHOP, to the maximum extent permitted by law. This includes without limitation, lost profits, business interruption, or lost information. In no event will UNIVERSLESS LTD be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages. UNIVERSLESS LTD shall have no liability with respect to the content of PAGEHOP or any part thereof, including but not limited to errors or omissions contained therein, libel, trademark rights, business interruption, loss of privacy or the disclosure of confidential information.
+							</li>
+						</ol>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script>
+<script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="/bower_components/classie/classie.js"></script>
+<script src="/pagehopapp-scripts/cbpAnimatedHeader.js"></script>
+
+<!-- Custom theme JavaScript -->
+<script src="/pagehopapp-scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* Custom for api.pagehopapp.com */
+
+#page-banner {
+	background-size: 432px auto;
+}
+
+pre {
+	margin-bottom: 0;
+	word-wrap: normal;
+}
+
+/* everything bellow is from main site */
+
+a {
+	outline: none !important;
+	color: #2168A6;
+}
+
+button {
+	outline: none !important;
+}
+
+hr {
+	border-top: 1px solid #000;
+}
+
+/* Navigation */
+
+.navbar-default {
+	border-color: #000;
+	background-color: #fff;
+}
+
+.navbar-default .navbar-brand {
+	font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+	color: #000;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+	outline: 0;
+	color: #62dafe;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand {
+	/*margin-top: -15px;*/
+}
+
+.header-logo {
+	width: 20px;
+}
+
+.navbar-default .navbar-collapse {
+	border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #000;
+}
+
+.navbar-default .nav li a {
+	text-transform: uppercase;
+	font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #000;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+	outline: 0;
+	color: #57c8fe;
+}
+
+@media(min-width:768px) {
+	.navbar-default {
+		padding: 25px 0;
+		border: 0;
+		background-color: transparent;
+		-webkit-transition: padding .3s;
+		-moz-transition: padding .3s;
+		transition: padding .3s;
+	}
+
+	.navbar-default .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s;
+	}
+
+	.navbar-default .navbar-nav>.active>a {
+		border-radius: 3px;
+	}
+
+	.navbar-default.navbar-shrink {
+		padding: 0px 0px;
+		background-color: #fff;
+		border-bottom: 1px solid;
+	}
+
+	.navbar-default.navbar-shrink .navbar-brand {
+		font-size: 1.5em;
+	}
+}
+
+/* Buttons */
+
+button.pagehop-button {
+	color: #000;
+	border-color: #000;
+	background-color: transparent;
+	border-radius: 22px;
+	margin: 20px;
+}
+
+button.pagehop-button:hover,
+button.pagehop-button:focus {
+	color: #000;
+	background-color: transparent;
+	border-color: #428bca;
+}
+
+button.pagehop-button:focus,
+button.pagehop-button:active {
+	outline: none;
+	background-color: transparent;
+	border-color: #428bca;
+}
+
+button.pagehop-button[disabled] {
+	border-color: inherit;
+	/*background-color: transparent;*/
+}
+
+/* Modals */
+
+.modal .modal-content {
+	min-height: 100%;
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.modal .modal-content h1 {
+	width: 70%;
+	margin-left: 15%;
+}
+
+.modal .modal-content p,
+.modal .modal-content ol {
+	text-align: left;
+}
+
+.modal .close-modal {
+	z-index: 1050;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.modal .close-modal:hover {
+	opacity: .3;
+	color: #57c8fe;
+}
+
+.modal .close-modal .lr {
+	z-index: 1051;
+	width: 2px;
+	height: 75px;
+	margin-left: 35px;
+	background-color: #000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.modal .close-modal .lr .rl {
+	z-index: 1052;
+	width: 2px;
+	height: 75px;
+	background-color: #000;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/* Footer */
+
+footer {
+	padding: 25px 0;
+	border-top: 1px solid;
+	text-align: center;
+	background-color: #fff;
+	color: #000;
+}
+
+footer span.copyright {
+	text-transform: uppercase;
+	text-transform: none;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 40px;
+}
+
+footer ul.quicklinks {
+	margin-bottom: 0;
+	text-transform: uppercase;
+	text-transform: none;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 40px;
+}
+
+ul.social-buttons {
+	margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	font-size: 20px;
+	line-height: 40px;
+	outline: 0;
+	color: #000;
+	background-color: #fff;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+	background-color: #000;
+	color: #fff;
+}

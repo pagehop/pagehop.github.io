@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>ECMAScript | Pagehop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="http://api.pagehopapp.com/ecma-script/index.html">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link rel="alternate" href="/atom.xml" title="Documentation | Pagehop">
+  <meta name="description" content="This is intended as a quick reference for what you can use as JavaScript features. The best support for ES6 out thereUsing Babel, we provide the best support for ES6 on the market, in terms of variaty">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ECMAScript">
+<meta property="og:url" content="http://api.pagehopapp.com/ecma-script/index.html">
+<meta property="og:site_name" content="Documentation | Pagehop">
+<meta property="og:description" content="This is intended as a quick reference for what you can use as JavaScript features. The best support for ES6 out thereUsing Babel, we provide the best support for ES6 on the market, in terms of variaty">
+<meta property="og:image" content="http://api.pagehopapp.com/logo.png">
+<meta property="og:updated_time" content="2015-04-02T10:28:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ECMAScript">
+<meta name="twitter:description" content="This is intended as a quick reference for what you can use as JavaScript features. The best support for ES6 out thereUsing Babel, we provide the best support for ES6 on the market, in terms of variaty">
+<meta name="twitter:image" content="http://api.pagehopapp.com/logo.png">
+<meta name="twitter:site" content="@pagehopapp">
+
+  <!-- Bootstrap Core CSS -->
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom theme CSS -->
+<link href="/pagehopapp-styles/main.css" rel="stylesheet">
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53791435-1', 'api.pagehopapp.com');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand page-scroll-no-offset" href="#page-top" tabIndex="1">
+				<img class="header-logo" src="/img/favicon.ico">
+				Pagehop
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li>
+					<a href="http://pagehopapp.com"><i class="fa fa-arrow-left"></i></a>
+				</li>
+				<!-- <li>
+					<a href="http://pagehopapp.com/buy">Buy</a>
+				</li> -->
+				<li>
+					<a href="http://api.pagehopapp.com">API</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@pagehop">Blog</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+  <article class="page" itemscope itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="page-title-outer-container">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Documentation: ECMAScript</h1>
+        <a href="https://github.com/pagehop/api.pagehopapp.com/blob/master/source/ecma-script.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+    <div class="page-content">
+      <div class="toc-wrap">
+        <strong class="toc-title">Contents</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-best-support-for-ES6-out-there"><span class="toc-number">1.</span> <span class="toc-text">The best support for ES6 out there</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Supported-ECMAScript-6-features"><span class="toc-number">2.</span> <span class="toc-text">Supported ECMAScript 6 features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrows"><span class="toc-number">2.1.</span> <span class="toc-text">Arrows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Classes"><span class="toc-number">2.2.</span> <span class="toc-text">Classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enhanced-Object-Literals"><span class="toc-number">2.3.</span> <span class="toc-text">Enhanced Object Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Template-Strings"><span class="toc-number">2.4.</span> <span class="toc-text">Template Strings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Destructuring"><span class="toc-number">2.5.</span> <span class="toc-text">Destructuring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Default-Rest-Spread"><span class="toc-number">2.6.</span> <span class="toc-text">Default + Rest + Spread</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-Const"><span class="toc-number">2.7.</span> <span class="toc-text">Let + Const</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterators-For-Of"><span class="toc-number">2.8.</span> <span class="toc-text">Iterators + For..Of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generators"><span class="toc-number">2.9.</span> <span class="toc-text">Generators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comprehensions"><span class="toc-number">2.10.</span> <span class="toc-text">Comprehensions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unicode"><span class="toc-number">2.11.</span> <span class="toc-text">Unicode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modules"><span class="toc-number">2.12.</span> <span class="toc-text">Modules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Module-Loaders"><span class="toc-number">2.13.</span> <span class="toc-text">Module Loaders</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Map-Set-WeakMap-WeakSet"><span class="toc-number">2.14.</span> <span class="toc-text">Map + Set + WeakMap + WeakSet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Proxies"><span class="toc-number">2.15.</span> <span class="toc-text">Proxies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Symbols"><span class="toc-number">2.16.</span> <span class="toc-text">Symbols</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Subclassable-Built-ins"><span class="toc-number">2.17.</span> <span class="toc-text">Subclassable Built-ins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Math-Number-String-Object-APIs"><span class="toc-number">2.18.</span> <span class="toc-text">Math + Number + String + Object APIs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Binary-and-Octal-Literals"><span class="toc-number">2.19.</span> <span class="toc-text">Binary and Octal Literals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promises"><span class="toc-number">2.20.</span> <span class="toc-text">Promises</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reflect-API"><span class="toc-number">2.21.</span> <span class="toc-text">Reflect API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tail-Calls"><span class="toc-number">2.22.</span> <span class="toc-text">Tail Calls</span></a></li></ol></li></ol>
+      </div>
+      <div class="page-entry" itemprop="articleBody">
+        <p>This is intended as a quick reference for what you can use as JavaScript features.</p>
+<h2 id="The-best-support-for-ES6-out-there"><a href="#The-best-support-for-ES6-out-there" class="headerlink" title="The best support for ES6 out there"></a>The best support for ES6 out there</h2><p>Using <a href="https://babeljs.io/" target="_blank" rel="noopener">Babel</a>, we provide the best support for ES6 on the market, in terms of variaty of availble language features.</p>
+<p>Starting from Pagehop 1.3, you are be able to use features such as <strong>classes</strong>, <strong>modules</strong>, <strong>arrow functions</strong>, <strong>generators</strong>, <strong>iterators</strong>, <strong>for-of cycles</strong> and many others.</p>
+<p><a href="https://kangax.github.io/compat-table/es6/#babel" target="_blank" rel="noopener">Check the current coverage of ES6 by Babel.js</a>.</p>
+<h2 id="Supported-ECMAScript-6-features"><a href="#Supported-ECMAScript-6-features" class="headerlink" title="Supported ECMAScript 6 features"></a>Supported ECMAScript 6 features</h2><h3 id="Arrows"><a href="#Arrows" class="headerlink" title="Arrows"></a>Arrows</h3><p>Arrows are a function shorthand using the <code>=&gt;</code> syntax.  They are syntactically<br>similar to the related feature in C#, Java 8 and CoffeeScript.  They support<br>both expression and statement bodies.  Unlike functions, arrows share the same<br>lexical <code>this</code> as their surrounding code.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Expression bodies</span></span><br><span class="line"><span class="keyword">var</span> odds = evens.map(<span class="function"><span class="params">v</span> =&gt;</span> v + <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> nums = evens.map(<span class="function">(<span class="params">v, i</span>) =&gt;</span> v + i);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Statement bodies</span></span><br><span class="line">nums.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (v % <span class="number">5</span> === <span class="number">0</span>)</span><br><span class="line">    fives.push(v);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Lexical this</span></span><br><span class="line"><span class="keyword">var</span> bob = &#123;</span><br><span class="line">  _name: <span class="string">"Bob"</span>,</span><br><span class="line">  _friends: [],</span><br><span class="line">  printFriends() &#123;</span><br><span class="line">    <span class="keyword">this</span>._friends.forEach(<span class="function"><span class="params">f</span> =&gt;</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>._name + <span class="string">" knows "</span> + f));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><p>ES6 classes are a simple sugar over the prototype-based OO pattern.  Having a<br>single convenient declarative form makes class patterns easier to use, and<br>encourages interoperability.  Classes support prototype-based inheritance, super<br>calls, instance and static methods and constructors.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SkinnedMesh</span> <span class="keyword">extends</span> <span class="title">THREE</span>.<span class="title">Mesh</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(geometry, materials) &#123;</span><br><span class="line">    <span class="keyword">super</span>(geometry, materials);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.idMatrix = SkinnedMesh.defaultMatrix();</span><br><span class="line">    <span class="keyword">this</span>.bones = [];</span><br><span class="line">    <span class="keyword">this</span>.boneMatrices = [];</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  &#125;</span><br><span class="line">  update(camera) &#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="keyword">super</span>.update();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">static</span> defaultMatrix() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> THREE.Matrix4();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Enhanced-Object-Literals"><a href="#Enhanced-Object-Literals" class="headerlink" title="Enhanced Object Literals"></a>Enhanced Object Literals</h3><p>Object literals are extended to support setting the prototype at construction,<br>shorthand for <code>foo: foo</code> assignments, defining methods and making super calls.<br>Together, these also bring object literals and class declarations closer<br>together, and let object-based design benefit from some of the same<br>conveniences.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="comment">// __proto__</span></span><br><span class="line">    __proto__: theProtoObj,</span><br><span class="line">    <span class="comment">// Shorthand for ‘handler: handler’</span></span><br><span class="line">    handler,</span><br><span class="line">    <span class="comment">// Methods</span></span><br><span class="line">    toString() &#123;</span><br><span class="line">     <span class="comment">// Super calls</span></span><br><span class="line">     <span class="keyword">return</span> <span class="string">"d "</span> + <span class="keyword">super</span>.toString();</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// Computed (dynamic) property names</span></span><br><span class="line">    [ <span class="string">"prop_"</span> + <span class="function">(<span class="params">(</span>) =&gt;</span> <span class="number">42</span>)() ]: <span class="number">42</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note info"><strong class="note-title">__proto__ support comes from the JavaScript engine running your program</strong></blockquote></escape>
+
+Although most support the now standard property, [some do not](http://kangax.github.io/compat-table/es6/#__proto___in_object_literals).
+
+<escape></escape>
+
+<h3 id="Template-Strings"><a href="#Template-Strings" class="headerlink" title="Template Strings"></a>Template Strings</h3><p>Template strings provide syntactic sugar for constructing strings. This is<br>similar to string interpolation features in Perl, Python and more. Optionally, a<br>tag can be added to allow the string construction to be customized, avoiding<br>injection attacks or constructing higher level data structures from string<br>contents.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Basic literal string creation</span></span><br><span class="line"><span class="string">`In JavaScript "\n" is a line-feed.`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Multiline strings</span></span><br><span class="line"><span class="string">`In JavaScript this is</span></span><br><span class="line"><span class="string"> not legal.`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Interpolate variable bindings</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">"Bob"</span>, time = <span class="string">"today"</span>;</span><br><span class="line"><span class="string">`Hello <span class="subst">$&#123;name&#125;</span>, how are you <span class="subst">$&#123;time&#125;</span>?`</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Construct an HTTP request prefix is used to interpret the replacements and construction</span></span><br><span class="line">GET<span class="string">`http://foo.org/bar?a=<span class="subst">$&#123;a&#125;</span>&amp;b=<span class="subst">$&#123;b&#125;</span></span></span><br><span class="line"><span class="string">    Content-Type: application/json</span></span><br><span class="line"><span class="string">    X-Credentials: <span class="subst">$&#123;credentials&#125;</span></span></span><br><span class="line"><span class="string">    &#123; "foo": <span class="subst">$&#123;foo&#125;</span>,</span></span><br><span class="line"><span class="string">      "bar": <span class="subst">$&#123;bar&#125;</span>&#125;`</span>(myOnReadyStateChangeHandler);</span><br></pre></td></tr></table></figure>
+<h3 id="Destructuring"><a href="#Destructuring" class="headerlink" title="Destructuring"></a>Destructuring</h3><p>Destructuring allows binding using pattern matching, with support for matching<br>arrays and objects.  Destructuring is fail-soft, similar to standard object<br>lookup <code>foo[&quot;bar&quot;]</code>, producing <code>undefined</code> values when not found.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// list matching</span></span><br><span class="line"><span class="keyword">var</span> [a, , b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// object matching</span></span><br><span class="line"><span class="keyword">var</span> &#123; <span class="attr">op</span>: a, <span class="attr">lhs</span>: &#123; <span class="attr">op</span>: b &#125;, <span class="attr">rhs</span>: c &#125;</span><br><span class="line">       = getASTNode()</span><br><span class="line"></span><br><span class="line"><span class="comment">// object matching shorthand</span></span><br><span class="line"><span class="comment">// binds `op`, `lhs` and `rhs` in scope</span></span><br><span class="line"><span class="keyword">var</span> &#123;op, lhs, rhs&#125; = getASTNode()</span><br><span class="line"></span><br><span class="line"><span class="comment">// Can be used in parameter position</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params">&#123;name: x&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">g(&#123;<span class="attr">name</span>: <span class="number">5</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Fail-soft destructuring</span></span><br><span class="line"><span class="keyword">var</span> [a] = [];</span><br><span class="line">a === <span class="literal">undefined</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Fail-soft destructuring with defaults</span></span><br><span class="line"><span class="keyword">var</span> [a = <span class="number">1</span>] = [];</span><br><span class="line">a === <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Default-Rest-Spread"><a href="#Default-Rest-Spread" class="headerlink" title="Default + Rest + Spread"></a>Default + Rest + Spread</h3><p>Callee-evaluated default parameter values. Turn an array into consecutive<br>arguments in a function call. Bind trailing parameters to an array. Rest<br>replaces the need for <code>arguments</code> and addresses common cases more directly.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y=<span class="number">12</span></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// y is 12 if not passed (or passed as undefined)</span></span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">3</span>) == <span class="number">15</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, ...y</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// y is an Array</span></span><br><span class="line">  <span class="keyword">return</span> x * y.length;</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="number">3</span>, <span class="string">"hello"</span>, <span class="literal">true</span>) == <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y, z</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y + z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Pass each elem of array as argument</span></span><br><span class="line">f(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) == <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<h3 id="Let-Const"><a href="#Let-Const" class="headerlink" title="Let + Const"></a>Let + Const</h3><p>Block-scoped binding constructs. <code>let</code> is the new <code>var</code>. <code>const</code> is<br>single-assignment. Static restrictions prevent use before assignment.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">let</span> x;</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">// okay, block scoped name</span></span><br><span class="line">      <span class="keyword">const</span> x = <span class="string">"sneaky"</span>;</span><br><span class="line">      <span class="comment">// error, const</span></span><br><span class="line">      x = <span class="string">"foo"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// error, already declared in block</span></span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">"inner"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Iterators-For-Of"><a href="#Iterators-For-Of" class="headerlink" title="Iterators + For..Of"></a>Iterators + For..Of</h3><p>Iterator objects enable custom iteration like CLR IEnumerable or Java<br>Iterable. Generalize <code>for..in</code> to custom iterator-based iteration with<br><code>for..of</code>. Don’t require realizing an array, enabling lazy design patterns like<br>LINQ.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> fibonacci = &#123;</span><br><span class="line">  [<span class="built_in">Symbol</span>.iterator]() &#123;</span><br><span class="line">    <span class="keyword">let</span> pre = <span class="number">0</span>, cur = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      next() &#123;</span><br><span class="line">        [pre, cur] = [cur, pre + cur];</span><br><span class="line">        <span class="keyword">return</span> &#123; <span class="attr">done</span>: <span class="literal">false</span>, <span class="attr">value</span>: cur &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> n <span class="keyword">of</span> fibonacci) &#123;</span><br><span class="line">  <span class="comment">// truncate the sequence at 1000</span></span><br><span class="line">  <span class="keyword">if</span> (n &gt; <span class="number">1000</span>)</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Iteration is based on these duck-typed interfaces (using<br><a href="http://typescriptlang.org" target="_blank" rel="noopener">TypeScript</a> type syntax for exposition only):</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> IteratorResult &#123;</span><br><span class="line">  done: <span class="built_in">boolean</span>;</span><br><span class="line">  value: <span class="built_in">any</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> Iterator &#123;</span><br><span class="line">  next(): IteratorResult;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> Iterable &#123;</span><br><span class="line">  [Symbol.iterator](): Iterator</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h3><p>Generators simplify iterator-authoring using <code>function*</code> and <code>yield</code>. A function<br>declared as function* returns a Generator instance. Generators are subtypes of<br>iterators which include additional <code>next</code> and <code>throw</code>. These enable values to<br>flow back into the generator, so <code>yield</code> is an expression form which returns a<br>value (or throws).</p>
+<p>Note: Can also be used to enable ‘await’-like async programming, see also ES7<br><code>await</code> proposal.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fibonacci = &#123;</span><br><span class="line">  [<span class="built_in">Symbol</span>.iterator]: <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> pre = <span class="number">0</span>, cur = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">      <span class="keyword">var</span> temp = pre;</span><br><span class="line">      pre = cur;</span><br><span class="line">      cur += temp;</span><br><span class="line">      <span class="keyword">yield</span> cur;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> n <span class="keyword">of</span> fibonacci) &#123;</span><br><span class="line">  <span class="comment">// truncate the sequence at 1000</span></span><br><span class="line">  <span class="keyword">if</span> (n &gt; <span class="number">1000</span>)</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The generator interface is (using <a href="http://typescriptlang.org" target="_blank" rel="noopener">TypeScript</a> type<br>syntax for exposition only):</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> Generator <span class="keyword">extends</span> Iterator &#123;</span><br><span class="line">    next(value?: <span class="built_in">any</span>): IteratorResult;</span><br><span class="line">    <span class="keyword">throw</span>(exception: <span class="built_in">any</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Comprehensions"><a href="#Comprehensions" class="headerlink" title="Comprehensions"></a>Comprehensions</h3><p>Array and generator comprehensions provide simple declarative list processing<br>similar as used in many functional programming patterns.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Array comprehensions</span></span><br><span class="line"><span class="keyword">var</span> results = [</span><br><span class="line">  <span class="keyword">for</span>(c <span class="keyword">of</span> customers)</span><br><span class="line">    <span class="keyword">if</span> (c.city == <span class="string">"Seattle"</span>)</span><br><span class="line">      &#123; <span class="attr">name</span>: c.name, <span class="attr">age</span>: c.age &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// Generator comprehensions</span></span><br><span class="line"><span class="keyword">var</span> results = (</span><br><span class="line">  <span class="keyword">for</span>(c <span class="keyword">of</span> customers)</span><br><span class="line">    <span class="keyword">if</span> (c.city == <span class="string">"Seattle"</span>)</span><br><span class="line">      &#123; <span class="attr">name</span>: c.name, <span class="attr">age</span>: c.age &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Not available in Pagehop</strong></blockquote></escape>
+
+Due to their experimental nature, these are only available if experimental support is enabled, which is not possible in Pagehop, at this moment.
+
+<escape></escape>
+
+<h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p>Non-breaking additions to support full Unicode, including new unicode literal<br>form in strings and new RegExp <code>u</code> mode to handle code points, as well as new<br>APIs to process strings at the 21bit code points level.  These additions support<br>building global apps in JavaScript.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// same as ES5.1</span></span><br><span class="line"><span class="string">"𠮷"</span>.length == <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new RegExp behaviour, opt-in ‘u’</span></span><br><span class="line"><span class="string">"𠮷"</span>.match(<span class="regexp">/./u</span>)[<span class="number">0</span>].length == <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new form</span></span><br><span class="line"><span class="string">"\u&#123;20BB7&#125;"</span> == <span class="string">"𠮷"</span> == <span class="string">"\uD842\uDFB7"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new String ops</span></span><br><span class="line"><span class="string">"𠮷"</span>.codePointAt(<span class="number">0</span>) == <span class="number">0x20BB7</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// for-of iterates code points</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> c <span class="keyword">of</span> <span class="string">"𠮷"</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3><p>Language-level support for modules for component definition. Codifies patterns<br>from popular JavaScript module loaders (AMD, CommonJS). Runtime behaviour</p>
+<p>defined by a host-defined default loader. Implicitly async model – no code<br>executes until requested modules are available and processed.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// lib/math.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> pi = <span class="number">3.141593</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> math <span class="keyword">from</span> <span class="string">"lib/math"</span>;</span><br><span class="line">alert(<span class="string">"2π = "</span> + math.sum(math.pi, math.pi));</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// otherApp.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;sum, pi&#125; <span class="keyword">from</span> <span class="string">"lib/math"</span>;</span><br><span class="line">alert(<span class="string">"2π = "</span> + sum(pi, pi));</span><br></pre></td></tr></table></figure>
+<p>Some additional features include <code>export default</code> and <code>export *</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// lib/mathplusplus.js</span></span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">"lib/math"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> e = <span class="number">2.71828182846</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.exp(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"><span class="keyword">import</span> exp, &#123;pi, e&#125; <span class="keyword">from</span> <span class="string">"lib/mathplusplus"</span>;</span><br><span class="line">alert(<span class="string">"2π = "</span> + exp(pi, e));</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note info"><strong class="note-title">Module Formatters</strong></blockquote></escape>
+
+Babel can transpile ES6 Modules to several different formats including Common.js, AMD, System, and UMD. You can even create your own. For more details see the [modules docs](https://bablejs.io/docs/usage/modules) on Babel's website.
+
+<escape></escape>
+
+<h3 id="Module-Loaders"><a href="#Module-Loaders" class="headerlink" title="Module Loaders"></a>Module Loaders</h3><p>Module loaders support:</p>
+<ul>
+<li>Dynamic loading</li>
+<li>State isolation</li>
+<li>Global namespace isolation</li>
+<li>Compilation hooks</li>
+<li>Nested virtualization</li>
+</ul>
+<p>The default module loader can be configured, and new loaders can be constructed<br>to evaluated and load code in isolated or constrained contexts.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Dynamic loading – ‘System’ is default loader</span></span><br><span class="line">System.import(<span class="string">"lib/math"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">m</span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">"2π = "</span> + m.sum(m.pi, m.pi));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Create execution sandboxes – new Loaders</span></span><br><span class="line"><span class="keyword">var</span> loader = <span class="keyword">new</span> Loader(&#123;</span><br><span class="line">  global: fixup(<span class="built_in">window</span>) <span class="comment">// replace ‘console.log’</span></span><br><span class="line">&#125;);</span><br><span class="line">loader.eval(<span class="string">"console.log(\"hello world!\");"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Directly manipulate module cache</span></span><br><span class="line">System.get(<span class="string">"jquery"</span>);</span><br><span class="line">System.set(<span class="string">"jquery"</span>, Module(&#123;<span class="attr">$</span>: $&#125;)); <span class="comment">// WARNING: not yet finalized</span></span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Additional polyfill needed</strong></blockquote></escape>
+
+Since babel defaults to using common.js modules, it does not include the polyfill for the module loader API. Get it [here](https://github.com/ModuleLoader/es6-module-loader).
+
+<escape></escape>
+
+<escape><blockquote class="note warn"><strong class="note-title">Using Module Loader</strong></blockquote></escape>
+
+In order to use this, you'll need to tell babel to use the <code>system</code> module formatter. Also be sure to check out [System.js](https://github.com/systemjs/systemjs).
+
+<escape></escape>
+
+<h3 id="Map-Set-WeakMap-WeakSet"><a href="#Map-Set-WeakMap-WeakSet" class="headerlink" title="Map + Set + WeakMap + WeakSet"></a>Map + Set + WeakMap + WeakSet</h3><p>Efficient data structures for common algorithms.  WeakMaps provides leak-free<br>object-key’d side tables.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Sets</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">s.add(<span class="string">"hello"</span>).add(<span class="string">"goodbye"</span>).add(<span class="string">"hello"</span>);</span><br><span class="line">s.size === <span class="number">2</span>;</span><br><span class="line">s.has(<span class="string">"hello"</span>) === <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Maps</span></span><br><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">m.set(<span class="string">"hello"</span>, <span class="number">42</span>);</span><br><span class="line">m.set(s, <span class="number">34</span>);</span><br><span class="line">m.get(s) == <span class="number">34</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Weak Maps</span></span><br><span class="line"><span class="keyword">var</span> wm = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line">wm.set(s, &#123; <span class="attr">extra</span>: <span class="number">42</span> &#125;);</span><br><span class="line">wm.size === <span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Weak Sets</span></span><br><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="built_in">WeakSet</span>();</span><br><span class="line">ws.add(&#123; <span class="attr">data</span>: <span class="number">42</span> &#125;);</span><br><span class="line"><span class="comment">// Because the added object has no other references, it will not be held in the set</span></span><br></pre></td></tr></table></figure>
+<h3 id="Proxies"><a href="#Proxies" class="headerlink" title="Proxies"></a>Proxies</h3><p>Proxies enable creation of objects with the full range of behaviors available to<br>host objects.  Can be used for interception, object virtualization,<br>logging/profiling, etc.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Proxying a normal object</span></span><br><span class="line"><span class="keyword">var</span> target = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> handler = &#123;</span><br><span class="line">  get: <span class="function"><span class="keyword">function</span> (<span class="params">receiver, name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`Hello, <span class="subst">$&#123;name&#125;</span>!`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, handler);</span><br><span class="line">p.world === <span class="string">"Hello, world!"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Proxying a function object</span></span><br><span class="line"><span class="keyword">var</span> target = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">"I am the target"</span>; &#125;;</span><br><span class="line"><span class="keyword">var</span> handler = &#123;</span><br><span class="line">  apply: <span class="function"><span class="keyword">function</span> (<span class="params">receiver, ...args</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"I am the proxy"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, handler);</span><br><span class="line">p() === <span class="string">"I am the proxy"</span>;</span><br></pre></td></tr></table></figure>
+<p>There are traps available for all of the runtime-level meta-operations:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> handler =</span><br><span class="line">&#123;</span><br><span class="line">  get:...,</span><br><span class="line">  set:...,</span><br><span class="line">  has:...,</span><br><span class="line">  deleteProperty:...,</span><br><span class="line">  apply:...,</span><br><span class="line">  construct:...,</span><br><span class="line">  getOwnPropertyDescriptor:...,</span><br><span class="line">  defineProperty:...,</span><br><span class="line">  getPrototypeOf:...,</span><br><span class="line">  setPrototypeOf:...,</span><br><span class="line">  enumerate:...,</span><br><span class="line">  ownKeys:...,</span><br><span class="line">  preventExtensions:...,</span><br><span class="line">  isExtensible:...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Unsupported feature</strong></blockquote></escape>
+
+Due to the limitations of ES5, Proxies cannot be transpiled or polyfilled. See support from various [JavaScript engines](http://kangax.github.io/compat-table/es6/#Proxy).
+
+<escape></escape>
+
+<h3 id="Symbols"><a href="#Symbols" class="headerlink" title="Symbols"></a>Symbols</h3><p>Symbols enable access control for object state. Symbols allow properties to be<br>keyed by either <code>string</code> (as in ES5) or <code>symbol</code>. Symbols are a new primitive<br>type. Optional <code>name</code> parameter used in debugging - but is not part of identity.<br>Symbols are unique (like gensym), but not private since they are exposed via<br>reflection features like <code>Object.getOwnPropertySymbols</code>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// module scoped symbol</span></span><br><span class="line">  <span class="keyword">var</span> key = <span class="built_in">Symbol</span>(<span class="string">"key"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params">privateData</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>[key] = privateData;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  MyClass.prototype = &#123;</span><br><span class="line">    doStuff: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      ... this[key] ...</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> MyClass(<span class="string">"hello"</span>)</span><br><span class="line">c[<span class="string">"key"</span>] === <span class="literal">undefined</span></span><br></pre></td></tr></table></figure>
+<h3 id="Subclassable-Built-ins"><a href="#Subclassable-Built-ins" class="headerlink" title="Subclassable Built-ins"></a>Subclassable Built-ins</h3><p>In ES6, built-ins like <code>Array</code>, <code>Date</code> and DOM <code>Element</code>s can be subclassed.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// User code of Array subclass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyArray</span> <span class="keyword">extends</span> <span class="title">Array</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(...args) &#123; <span class="keyword">super</span>(...args); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> MyArray();</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">12</span>;</span><br><span class="line">arr.length == <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="Math-Number-String-Object-APIs"><a href="#Math-Number-String-Object-APIs" class="headerlink" title="Math + Number + String + Object APIs"></a>Math + Number + String + Object APIs</h3><p>Many new library additions, including core Math libraries, Array conversion<br>helpers, and Object.assign for copying.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Number</span>.EPSILON</span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="literal">Infinity</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">"NaN"</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.acosh(<span class="number">3</span>) <span class="comment">// 1.762747174039086</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(<span class="number">3</span>, <span class="number">4</span>) <span class="comment">// 5</span></span><br><span class="line"><span class="built_in">Math</span>.imul(<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">32</span>) - <span class="number">1</span>, <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">32</span>) - <span class="number">2</span>) <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="string">"abcde"</span>.includes(<span class="string">"cd"</span>) <span class="comment">// true</span></span><br><span class="line"><span class="string">"abc"</span>.repeat(<span class="number">3</span>) <span class="comment">// "abcabcabc"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.from(<span class="built_in">document</span>.querySelectorAll(<span class="string">"*"</span>)) <span class="comment">// Returns a real Array</span></span><br><span class="line"><span class="built_in">Array</span>.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">// Similar to new Array(...), but without special one-arg behavior</span></span><br><span class="line">[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>].fill(<span class="number">7</span>, <span class="number">1</span>) <span class="comment">// [0,7,7]</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].findIndex(<span class="function"><span class="params">x</span> =&gt;</span> x == <span class="number">2</span>) <span class="comment">// 1</span></span><br><span class="line">[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>].entries() <span class="comment">// iterator [0, "a"], [1,"b"], [2,"c"]</span></span><br><span class="line">[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>].keys() <span class="comment">// iterator 0, 1, 2</span></span><br><span class="line">[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>].values() <span class="comment">// iterator "a", "b", "c"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.assign(Point, &#123; <span class="attr">origin</span>: <span class="keyword">new</span> Point(<span class="number">0</span>,<span class="number">0</span>) &#125;)</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Limited support from polyfill</strong></blockquote></escape>
+
+Most of these APIs are supported by the babel polyfill. However, certain features are omitted for various reasons (e.g. <code>String.prototype.normalize</code> needs a lot of additional code to support). You can find more polyfills [here](https://github.com/addyosmani/es6-tools#polyfills).
+
+<escape></escape>
+
+<h3 id="Binary-and-Octal-Literals"><a href="#Binary-and-Octal-Literals" class="headerlink" title="Binary and Octal Literals"></a>Binary and Octal Literals</h3><p>Two new numeric literal forms are added for binary (<code>b</code>) and octal (<code>o</code>).</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">0b111110111</span> === <span class="number">503</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0o767</span> === <span class="number">503</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Only supports literal form</strong></blockquote></escape>
+
+Babel is only able to transform <code>0o767</code> and not <code>Number("0o767")</code>.
+
+<escape></escape>
+
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><p>Promises are a library for asynchronous programming. Promises are a first class<br>representation of a value that may be made available in the future. Promises are<br>used in many existing JavaScript libraries.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeout</span>(<span class="params">duration = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(resolve, duration);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = timeout(<span class="number">1000</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> timeout(<span class="number">2000</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"hmm"</span>);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.all([timeout(<span class="number">100</span>), timeout(<span class="number">200</span>)]);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Reflect-API"><a href="#Reflect-API" class="headerlink" title="Reflect API"></a>Reflect API</h3><p>Full reflection API exposing the runtime-level meta-operations on objects. This<br>is effectively the inverse of the Proxy API, and allows making calls<br>corresponding to the same meta-operations as the proxy traps. Especially useful<br>for implementing proxies.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> O = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(O, <span class="string">'b'</span>, &#123;<span class="attr">value</span>: <span class="number">2</span>&#125;);</span><br><span class="line">O[<span class="built_in">Symbol</span>(<span class="string">'c'</span>)] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Reflect</span>.ownKeys(O); <span class="comment">// ['a', 'b', Symbol(c)]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.c = a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> instance = <span class="built_in">Reflect</span>.construct(C, [<span class="number">20</span>, <span class="number">22</span>]);</span><br><span class="line">instance.c; <span class="comment">// 42</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tail-Calls"><a href="#Tail-Calls" class="headerlink" title="Tail Calls"></a>Tail Calls</h3><p>Calls in tail-position are guaranteed to not grow the stack unboundedly. Makes<br>recursive algorithms safe in the face of unbounded inputs.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n, acc = <span class="number">1</span></span>) </span>&#123;</span><br><span class="line"><span class="meta">    "use strict"</span>;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> acc;</span><br><span class="line">    <span class="keyword">return</span> factorial(n - <span class="number">1</span>, n * acc);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Stack overflow in most implementations today,</span></span><br><span class="line"><span class="comment">// but safe on arbitrary inputs in eS6</span></span><br><span class="line">factorial(<span class="number">100000</span>)</span><br></pre></td></tr></table></figure>
+<escape><blockquote class="note warn"><strong class="note-title">Partial support</strong></blockquote></escape>
+
+Currently only self referencing tail recursion is supported due to the complexity of supporting tail calls globally.
+
+<escape></escape>
+
+      </div>
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2015-04-02T10:28:59.000Z" itemprop="dateModified">Last updated: Apr 2 2015</time>
+        <a href="/development-overview/" id="page-footer-prev" title="Overview">Prev</a><a href="/external-dependencies/" id="page-footer-next" title="External Dependencies">Next</a>
+      </footer>
+      
+    </div>
+    <aside id="sidebar">
+  
+    <strong class="sidebar-title">How to use</strong>
+    
+      <a href="/" class="sidebar-link">Install</a>
+    
+      <a href="/overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/register-with-license-key/" class="sidebar-link">Register with License-key</a>
+    
+      <a href="/search/" class="sidebar-link">Search</a>
+    
+      <a href="/page-hopping/" class="sidebar-link">Page-hopping</a>
+    
+      <a href="/docs-browsing/" class="sidebar-link">Docs Browsing</a>
+    
+      <a href="/reading-news/" class="sidebar-link">Reading News</a>
+    
+      <a href="/quick-info/" class="sidebar-link">Quick Info</a>
+    
+      <a href="/3rd-party-recipes-and-tools/" class="sidebar-link">3rd party Recipes and Tools</a>
+    
+  
+    <strong class="sidebar-title">Development</strong>
+    
+      <a href="/development-overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/ecma-script/" class="sidebar-link current">ECMAScript</a>
+    
+      <a href="/external-dependencies/" class="sidebar-link">External Dependencies</a>
+    
+  
+    <strong class="sidebar-title">Develop Recipes</strong>
+    
+      <a href="/scaffold-recipe/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-recipe/" class="sidebar-link">package.json</a>
+    
+      <a href="/page-loop-js/" class="sidebar-link">page-loop.js</a>
+    
+      <a href="/scrape-js/" class="sidebar-link">scrape.js</a>
+    
+      <a href="/testing-recipes/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Develop Tools</strong>
+    
+      <a href="/scaffold-tool/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-tool/" class="sidebar-link">package.json</a>
+    
+      <a href="/tool-js/" class="sidebar-link">tool.js</a>
+    
+      <a href="/testing-tools/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Used Software</strong>
+    
+      <a href="/used-software/" class="sidebar-link">Licenses</a>
+    
+  
+    <strong class="sidebar-title">Misc</strong>
+    
+      <a href="/releases/" class="sidebar-link">Release History</a>
+    
+      <a href="/faq/" class="sidebar-link">F.A.Q.</a>
+    
+  
+</aside>
+  </div>
+</article>
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright &copy; <a href="http://universless.com">Universless Ltd.</a> 2015-2018</span>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline social-buttons">
+					<li><a href="http://twitter.com/pagehopapp"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a href="http://facebook.com/pagehop"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li><a href="mailto:support@pagehopapp.com"><i class="fa fa-envelope"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline quicklinks">
+					<li>
+						<a href="#" data-target="#privacyPolicyModal" data-keyboard="true" data-toggle="modal">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#" data-target="#eulaModal" data-keyboard="true" data-toggle="modal">EULA</a>
+					</li>
+					<li>
+						<a href="http://pagehopapp.com/press">Press</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Modals -->
+<!-- PrivacyPolicy Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>Privacy Policy</h1>
+
+						<h2>The information you provide to us</h2>
+						<p>We take your privacy seriously. When you provide us with any personal information, we do our best to keep it safe. We will not share your personal information with third-parties other than our payment gateway and will take all reasonable precautions to protect it.</p>
+
+						<p>Braintree Payments (our payment gateway) will be the only party receiving your payment data in case you purchase a license for Pagehop. Our servers will not receive any of this data, other than your email, your name and the text of your License Key (the one you receive through email upon purchase) in order to be able to resend you your License Key in case it's lost. Universless Ltd. is not and will not be responsible nor held liable for any security issues that Braintree Payments gateway has or will have in future.</p>
+
+						<h2>Tracking and cookies</h2>
+						<p>To help us understand how we can make Pagehop's website better, we use Google Analytics on pagehopapp.com, as well as on api.pagehopapp.com.</p>
+
+						<p>This information is anonymous and does not provide us with identifiable information, but helps us ensure that our documentation pages answer all of the most popular questions correctly, for example.</p>
+
+						<hr style="width:60%">
+						<i>
+							<p>By using the websites owned by Universless Ltd. (including pagehopapp.com, www.pagehopapp.com and api.pagehopapp.com), you agree to the Privacy Policy above.</p>
+
+							<p>If you have any questions about our privacy policy, please contact us on support@pagehopapp.com.</p>
+						</i>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EULA Modal -->
+<div class="modal fade" id="eulaModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>End-user license agreement (EULA)</h1>
+
+						<p>The SOFTWARE PRODUCT (PAGEHOP) is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.
+						</p>
+						<ol>
+							<li>LICENSES<br>
+							PAGEHOP is licensed as follows:
+
+								<ol type="a">
+									<li>Installation and Usage.<br>
+										Licenses are per user and valid for use on all supported operating systems. License keys may be used on multiple computers and operating systems, provided the license key holder is the primary user.
+									</li>
+									<li>Backup Copies.<br>
+										You may make copies of the license key and or PAGEHOP for backup and archival purposes.
+									</li>
+								</ol>
+
+							</li>
+							<li>DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+								<ol type="a">
+									<li>Maintenance of Copyright Notices.<br>
+										You must not remove or alter any copyright notices on any copy of PAGEHOP.
+									</li>
+									<li>Distribution.<br>
+										You may not distribute or sell license keys or PAGEHOP to third parties. Licenses will be revoked if distributed or sold to third parties.
+									</li>
+									<li>Rental.<br>
+										You may not rent, lease, or lend the license key or PAGEHOP.
+									</li>
+								</ol>
+
+							</li>
+							<li>COPYRIGHT<br>
+								All title, including but not limited to copyrights, in and to PAGEHOP and any copies thereof are owned by UNIVERSLESS LTD.
+							</li>
+							<li>NO WARRANTIES<br>
+								UNIVERSLESS LTD expressly disclaims any warranty for PAGEHOP, which is provided 'as is' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, non-infringement, or fitness of a particular purpose.
+
+							</li>
+							<li>REFUNDS<br>
+								Refunds are available within 10 days of purchasing. Please send us an email (support@pagehopapp.com) if you wish to claim a refund. Refund can't be claimed after the first 10 days.
+							</li>
+							<li>LIMITATION OF LIABILITY<br>
+								In no event shall UNIVERSLESS LTD be liable for any damages due to use of PAGEHOP, to the maximum extent permitted by law. This includes without limitation, lost profits, business interruption, or lost information. In no event will UNIVERSLESS LTD be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages. UNIVERSLESS LTD shall have no liability with respect to the content of PAGEHOP or any part thereof, including but not limited to errors or omissions contained therein, libel, trademark rights, business interruption, loss of privacy or the disclosure of confidential information.
+							</li>
+						</ol>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script>
+<script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="/bower_components/classie/classie.js"></script>
+<script src="/pagehopapp-scripts/cbpAnimatedHeader.js"></script>
+
+<!-- Custom theme JavaScript -->
+<script src="/pagehopapp-scripts/main.js"></script>
+</body>
+</html>

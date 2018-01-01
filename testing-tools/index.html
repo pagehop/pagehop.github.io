@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Testing your tools | Pagehop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="http://api.pagehopapp.com/testing-tools/index.html">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link rel="alternate" href="/atom.xml" title="Documentation | Pagehop">
+  <meta name="description" content="What should be tested?Simply said - everything. How should my tests be structured?The best advice here, would be to use the pagehop CLI tool ( npm install -g pagehop ). Once you scaffold your project">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Testing your tools">
+<meta property="og:url" content="http://api.pagehopapp.com/testing-tools/index.html">
+<meta property="og:site_name" content="Documentation | Pagehop">
+<meta property="og:description" content="What should be tested?Simply said - everything. How should my tests be structured?The best advice here, would be to use the pagehop CLI tool ( npm install -g pagehop ). Once you scaffold your project">
+<meta property="og:image" content="http://api.pagehopapp.com/logo.png">
+<meta property="og:updated_time" content="2014-09-04T15:47:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Testing your tools">
+<meta name="twitter:description" content="What should be tested?Simply said - everything. How should my tests be structured?The best advice here, would be to use the pagehop CLI tool ( npm install -g pagehop ). Once you scaffold your project">
+<meta name="twitter:image" content="http://api.pagehopapp.com/logo.png">
+<meta name="twitter:site" content="@pagehopapp">
+
+  <!-- Bootstrap Core CSS -->
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom theme CSS -->
+<link href="/pagehopapp-styles/main.css" rel="stylesheet">
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53791435-1', 'api.pagehopapp.com');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand page-scroll-no-offset" href="#page-top" tabIndex="1">
+				<img class="header-logo" src="/img/favicon.ico">
+				Pagehop
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li>
+					<a href="http://pagehopapp.com"><i class="fa fa-arrow-left"></i></a>
+				</li>
+				<!-- <li>
+					<a href="http://pagehopapp.com/buy">Buy</a>
+				</li> -->
+				<li>
+					<a href="http://api.pagehopapp.com">API</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@pagehop">Blog</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+  <article class="page" itemscope itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="page-title-outer-container">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Documentation: Testing your tools</h1>
+        <a href="https://github.com/pagehop/api.pagehopapp.com/blob/master/source/testing-tools.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+    <div class="page-content">
+      <div class="toc-wrap">
+        <strong class="toc-title">Contents</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#What-should-be-tested"><span class="toc-number">1.</span> <span class="toc-text">What should be tested?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-should-my-tests-be-structured"><span class="toc-number">2.</span> <span class="toc-text">How should my tests be structured?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-testing-lib"><span class="toc-number">3.</span> <span class="toc-text">The testing lib.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-test-my-tool-js"><span class="toc-number">4.</span> <span class="toc-text">How to test my tool.js?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-cases"><span class="toc-number">4.1.</span> <span class="toc-text">Test-cases</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-implement-test-cases"><span class="toc-number">4.2.</span> <span class="toc-text">How to implement test-cases?</span></a></li></ol></li></ol>
+      </div>
+      <div class="page-entry" itemprop="articleBody">
+        <h1 id="What-should-be-tested"><a href="#What-should-be-tested" class="headerlink" title="What should be tested?"></a>What should be tested?</h1><p>Simply said - everything.</p>
+<h1 id="How-should-my-tests-be-structured"><a href="#How-should-my-tests-be-structured" class="headerlink" title="How should my tests be structured?"></a>How should my tests be structured?</h1><p>The best advice here, would be to use the pagehop CLI tool ( <code>npm install -g pagehop</code> ).</p>
+<p>Once you scaffold your project (check the <a href="/scaffold-tool/">Scaffold</a> article), you will get a nice example with a few sample tests.</p>
+<p>Use this example as a convention for structuring your tests.</p>
+<escape><blockquote class="note tip"><strong class="note-title">Use the public repository for Pagehop tools.</strong></blockquote></escape>
+
+You can use any tool in the [public repo](https://github.com/pagehop/tools) as a reference. Whenever you wonder how should you approach a problem, you can check if it was already solved by some of the tools in the public repo (which tool seems similar to yours?). The repository will gradually grow and its value as a help reference, will too.
+
+<escape></escape>
+
+<p>The convention is:</p>
+<ul>
+<li>Tests and all test data, are placed under a dir named test in the root of the tool.</li>
+<li>Tests are written in the BDD style.</li>
+<li>Tests use should.js for assertions.</li>
+<li>There should be 1 test file - tool-test.js. Tools should have a single purpose and therefore should be kept simple without too many variable cases.</li>
+<li>Bulky test-data should be in a separate dir test/data (and <strong>definitely</strong> not in the test file(s))</li>
+</ul>
+<h1 id="The-testing-lib"><a href="#The-testing-lib" class="headerlink" title="The testing lib."></a>The testing lib.</h1><p>We’ve made an effort to simplify your development process, so we crafted a simple framework to help you test your recipes and tools.</p>
+<p>You use the framework like this:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">var</span> test = <span class="built_in">require</span>(<span class="string">"pagehop"</span>).test;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">"tool"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    before( <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">        test.init( done );</span><br><span class="line">    &#125; );</span><br><span class="line">    <span class="comment">// test cases making calls to test.tool()</span></span><br><span class="line">    ...</span><br><span class="line">    after( <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">        test.finalize( done );</span><br><span class="line">    &#125; );</span><br><span class="line">&#125; );</span><br></pre></td></tr></table></figure>
+<h1 id="How-to-test-my-tool-js"><a href="#How-to-test-my-tool-js" class="headerlink" title="How to test my tool.js?"></a>How to test my tool.js?</h1><h2 id="Test-cases"><a href="#Test-cases" class="headerlink" title="Test-cases"></a>Test-cases</h2><p>Here is how should your tool-test.js file roughly look like:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> should = <span class="built_in">require</span>(<span class="string">"should"</span>),</span><br><span class="line">    pathUtils = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> test = <span class="built_in">require</span>(<span class="string">"pagehop"</span>).test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pathToTool = pathUtils.resolve( pathUtils.join( __dirname, <span class="string">'../'</span> ) );</span><br><span class="line"></span><br><span class="line">describe(<span class="string">"tool"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    before( <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">        test.init( done );</span><br><span class="line">    &#125; );</span><br><span class="line">    it( <span class="string">"should return an empty array if no results"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">done</span>)</span>&#123;</span><br><span class="line">        test.tool(</span><br><span class="line">            ...</span><br><span class="line">        );</span><br><span class="line">    &#125; );</span><br><span class="line">    it( <span class="string">"it should add to the hops array"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">done</span>)</span>&#123;</span><br><span class="line">        test.tool(</span><br><span class="line">            ...</span><br><span class="line">        );</span><br><span class="line">    &#125; );</span><br><span class="line">    ...</span><br><span class="line">    after( <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">        test.finalize( done );</span><br><span class="line">    &#125; );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>These are just 2 sample cases and there is no requirement to have these exact cases in your test - just an idea. Probably the first one is pretty much universal, but the second one - not all tools change the hops array.</p>
+<h2 id="How-to-implement-test-cases"><a href="#How-to-implement-test-cases" class="headerlink" title="How to implement test-cases?"></a>How to implement test-cases?</h2><p>For testing your tool.js, you can use the test.tool() method.</p>
+<p><strong>test.tool( pathToTool, preToolFunc, callback )</strong></p>
+<ul>
+<li><strong>pathToTool</strong> - should be an absolute path to the directory of your tool (usually resolving “../“ should be the path).</li>
+<li><strong>preToolFunc</strong> - this is a function that will run in the same sandboxed environment as your tool script, but <strong>before</strong> it. In it, you are suppose to predefine the conditions in which the tool will be running. You usually do this, by initializing the pagehop object with data and/or settings some global mocks, expected by the tool script.</li>
+<li><strong>callback( result )/callback( error )</strong> - in your success test cases, expect the <code>result</code> parameter to be passed. In your error handling tests you can expect an <code>error</code> argument, instead.</li>
+</ul>
+<p>Here is a sample success case from the sample tool created on <code>pagehop tool --init</code> with the pagehop cli tool:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> pathToTool = pathUtils.resolve( __dirname, <span class="string">'../'</span> );</span><br><span class="line">...</span><br><span class="line">it( <span class="string">"should set items to empty array if no results"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">done</span>)</span>&#123;</span><br><span class="line">    test.tool(</span><br><span class="line">        pathToTool,</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> currentResults = [],</span><br><span class="line">                hops = [],</span><br><span class="line">                argument = <span class="string">"irrelevant"</span>,</span><br><span class="line">                selection = <span class="number">0</span>,</span><br><span class="line">                pagehop = <span class="built_in">window</span>.pagehop;</span><br><span class="line"></span><br><span class="line">            pagehop.init( currentResults, hops, argument, selection );</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">results</span>) </span>&#123;</span><br><span class="line">            should.exist( results );</span><br><span class="line">            results.should.eql( &#123;</span><br><span class="line">                items: [],</span><br><span class="line">                hops: [],</span><br><span class="line">                selection: <span class="number">0</span></span><br><span class="line">            &#125; );</span><br><span class="line">            done();</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">&#125; );</span><br></pre></td></tr></table></figure>
+      </div>
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2014-09-04T15:47:53.000Z" itemprop="dateModified">Last updated: Sep 4 2014</time>
+        <a href="/tool-js/" id="page-footer-prev" title="tool.js">Prev</a><a href="/used-software/" id="page-footer-next" title="Licenses">Next</a>
+      </footer>
+      
+    </div>
+    <aside id="sidebar">
+  
+    <strong class="sidebar-title">How to use</strong>
+    
+      <a href="/" class="sidebar-link">Install</a>
+    
+      <a href="/overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/register-with-license-key/" class="sidebar-link">Register with License-key</a>
+    
+      <a href="/search/" class="sidebar-link">Search</a>
+    
+      <a href="/page-hopping/" class="sidebar-link">Page-hopping</a>
+    
+      <a href="/docs-browsing/" class="sidebar-link">Docs Browsing</a>
+    
+      <a href="/reading-news/" class="sidebar-link">Reading News</a>
+    
+      <a href="/quick-info/" class="sidebar-link">Quick Info</a>
+    
+      <a href="/3rd-party-recipes-and-tools/" class="sidebar-link">3rd party Recipes and Tools</a>
+    
+  
+    <strong class="sidebar-title">Development</strong>
+    
+      <a href="/development-overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/ecma-script/" class="sidebar-link">ECMAScript</a>
+    
+      <a href="/external-dependencies/" class="sidebar-link">External Dependencies</a>
+    
+  
+    <strong class="sidebar-title">Develop Recipes</strong>
+    
+      <a href="/scaffold-recipe/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-recipe/" class="sidebar-link">package.json</a>
+    
+      <a href="/page-loop-js/" class="sidebar-link">page-loop.js</a>
+    
+      <a href="/scrape-js/" class="sidebar-link">scrape.js</a>
+    
+      <a href="/testing-recipes/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Develop Tools</strong>
+    
+      <a href="/scaffold-tool/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-tool/" class="sidebar-link">package.json</a>
+    
+      <a href="/tool-js/" class="sidebar-link">tool.js</a>
+    
+      <a href="/testing-tools/" class="sidebar-link current">Testing</a>
+    
+  
+    <strong class="sidebar-title">Used Software</strong>
+    
+      <a href="/used-software/" class="sidebar-link">Licenses</a>
+    
+  
+    <strong class="sidebar-title">Misc</strong>
+    
+      <a href="/releases/" class="sidebar-link">Release History</a>
+    
+      <a href="/faq/" class="sidebar-link">F.A.Q.</a>
+    
+  
+</aside>
+  </div>
+</article>
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright &copy; <a href="http://universless.com">Universless Ltd.</a> 2015-2018</span>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline social-buttons">
+					<li><a href="http://twitter.com/pagehopapp"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a href="http://facebook.com/pagehop"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li><a href="mailto:support@pagehopapp.com"><i class="fa fa-envelope"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline quicklinks">
+					<li>
+						<a href="#" data-target="#privacyPolicyModal" data-keyboard="true" data-toggle="modal">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#" data-target="#eulaModal" data-keyboard="true" data-toggle="modal">EULA</a>
+					</li>
+					<li>
+						<a href="http://pagehopapp.com/press">Press</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Modals -->
+<!-- PrivacyPolicy Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>Privacy Policy</h1>
+
+						<h2>The information you provide to us</h2>
+						<p>We take your privacy seriously. When you provide us with any personal information, we do our best to keep it safe. We will not share your personal information with third-parties other than our payment gateway and will take all reasonable precautions to protect it.</p>
+
+						<p>Braintree Payments (our payment gateway) will be the only party receiving your payment data in case you purchase a license for Pagehop. Our servers will not receive any of this data, other than your email, your name and the text of your License Key (the one you receive through email upon purchase) in order to be able to resend you your License Key in case it's lost. Universless Ltd. is not and will not be responsible nor held liable for any security issues that Braintree Payments gateway has or will have in future.</p>
+
+						<h2>Tracking and cookies</h2>
+						<p>To help us understand how we can make Pagehop's website better, we use Google Analytics on pagehopapp.com, as well as on api.pagehopapp.com.</p>
+
+						<p>This information is anonymous and does not provide us with identifiable information, but helps us ensure that our documentation pages answer all of the most popular questions correctly, for example.</p>
+
+						<hr style="width:60%">
+						<i>
+							<p>By using the websites owned by Universless Ltd. (including pagehopapp.com, www.pagehopapp.com and api.pagehopapp.com), you agree to the Privacy Policy above.</p>
+
+							<p>If you have any questions about our privacy policy, please contact us on support@pagehopapp.com.</p>
+						</i>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EULA Modal -->
+<div class="modal fade" id="eulaModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>End-user license agreement (EULA)</h1>
+
+						<p>The SOFTWARE PRODUCT (PAGEHOP) is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.
+						</p>
+						<ol>
+							<li>LICENSES<br>
+							PAGEHOP is licensed as follows:
+
+								<ol type="a">
+									<li>Installation and Usage.<br>
+										Licenses are per user and valid for use on all supported operating systems. License keys may be used on multiple computers and operating systems, provided the license key holder is the primary user.
+									</li>
+									<li>Backup Copies.<br>
+										You may make copies of the license key and or PAGEHOP for backup and archival purposes.
+									</li>
+								</ol>
+
+							</li>
+							<li>DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+								<ol type="a">
+									<li>Maintenance of Copyright Notices.<br>
+										You must not remove or alter any copyright notices on any copy of PAGEHOP.
+									</li>
+									<li>Distribution.<br>
+										You may not distribute or sell license keys or PAGEHOP to third parties. Licenses will be revoked if distributed or sold to third parties.
+									</li>
+									<li>Rental.<br>
+										You may not rent, lease, or lend the license key or PAGEHOP.
+									</li>
+								</ol>
+
+							</li>
+							<li>COPYRIGHT<br>
+								All title, including but not limited to copyrights, in and to PAGEHOP and any copies thereof are owned by UNIVERSLESS LTD.
+							</li>
+							<li>NO WARRANTIES<br>
+								UNIVERSLESS LTD expressly disclaims any warranty for PAGEHOP, which is provided 'as is' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, non-infringement, or fitness of a particular purpose.
+
+							</li>
+							<li>REFUNDS<br>
+								Refunds are available within 10 days of purchasing. Please send us an email (support@pagehopapp.com) if you wish to claim a refund. Refund can't be claimed after the first 10 days.
+							</li>
+							<li>LIMITATION OF LIABILITY<br>
+								In no event shall UNIVERSLESS LTD be liable for any damages due to use of PAGEHOP, to the maximum extent permitted by law. This includes without limitation, lost profits, business interruption, or lost information. In no event will UNIVERSLESS LTD be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages. UNIVERSLESS LTD shall have no liability with respect to the content of PAGEHOP or any part thereof, including but not limited to errors or omissions contained therein, libel, trademark rights, business interruption, loss of privacy or the disclosure of confidential information.
+							</li>
+						</ol>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script>
+<script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="/bower_components/classie/classie.js"></script>
+<script src="/pagehopapp-scripts/cbpAnimatedHeader.js"></script>
+
+<!-- Custom theme JavaScript -->
+<script src="/pagehopapp-scripts/main.js"></script>
+</body>
+</html>

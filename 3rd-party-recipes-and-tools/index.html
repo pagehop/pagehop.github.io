@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>3rd party Recipes and Tools | Pagehop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="canonical" href="http://api.pagehopapp.com/3rd-party-recipes-and-tools/index.html">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+  <link rel="alternate" href="/atom.xml" title="Documentation | Pagehop">
+  <meta name="description" content="Although, we like the initial set of recipes and tools, we believe the true value of Pagehop, is coming from the ability to use 3rd party Recipes and Tools. It’s pretty easy to develop some yourself -">
+<meta property="og:type" content="website">
+<meta property="og:title" content="3rd party Recipes and Tools">
+<meta property="og:url" content="http://api.pagehopapp.com/3rd-party-recipes-and-tools/index.html">
+<meta property="og:site_name" content="Documentation | Pagehop">
+<meta property="og:description" content="Although, we like the initial set of recipes and tools, we believe the true value of Pagehop, is coming from the ability to use 3rd party Recipes and Tools. It’s pretty easy to develop some yourself -">
+<meta property="og:image" content="http://api.pagehopapp.com/logo.png">
+<meta property="og:updated_time" content="2015-01-06T17:43:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3rd party Recipes and Tools">
+<meta name="twitter:description" content="Although, we like the initial set of recipes and tools, we believe the true value of Pagehop, is coming from the ability to use 3rd party Recipes and Tools. It’s pretty easy to develop some yourself -">
+<meta name="twitter:image" content="http://api.pagehopapp.com/logo.png">
+<meta name="twitter:site" content="@pagehopapp">
+
+  <!-- Bootstrap Core CSS -->
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom theme CSS -->
+<link href="/pagehopapp-styles/main.css" rel="stylesheet">
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53791435-1', 'api.pagehopapp.com');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand page-scroll-no-offset" href="#page-top" tabIndex="1">
+				<img class="header-logo" src="/img/favicon.ico">
+				Pagehop
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li>
+					<a href="http://pagehopapp.com"><i class="fa fa-arrow-left"></i></a>
+				</li>
+				<!-- <li>
+					<a href="http://pagehopapp.com/buy">Buy</a>
+				</li> -->
+				<li>
+					<a href="http://api.pagehopapp.com">API</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@pagehop">Blog</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+  <article class="page" itemscope itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="page-title-outer-container">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Documentation: 3rd party Recipes and Tools</h1>
+        <a href="https://github.com/pagehop/api.pagehopapp.com/blob/master/source/3rd-party-recipes-and-tools.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+    <div class="page-content">
+      <div class="toc-wrap">
+        <strong class="toc-title">Contents</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">1.</span> <span class="toc-text">Install</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-dirs"><span class="toc-number">1.1.</span> <span class="toc-text">Create dirs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Copy-recipe-tool"><span class="toc-number">1.2.</span> <span class="toc-text">Copy recipe/tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Newer-versions-override-older-ones"><span class="toc-number">1.3.</span> <span class="toc-text">Newer versions override older ones</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Revert-to-older-version"><span class="toc-number">1.3.1.</span> <span class="toc-text">Revert to older version</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-pagehop-CLI-tool-will-be-helping-with-this"><span class="toc-number">2.</span> <span class="toc-text">The pagehop CLI tool will be helping with this</span></a></li></ol>
+      </div>
+      <div class="page-entry" itemprop="articleBody">
+        <p>Although, we like the initial set of recipes and tools, we believe the true value of Pagehop, is coming from the ability to use <strong>3rd party Recipes and Tools</strong>. It’s pretty easy to develop some yourself - you only need to know JavaScript and the minimalistic API of Pagehop - check the <a href="/development-overview/">Development</a> section.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Using 3rd-party recipes and tools is as simple as placing a folder in a specific location on the disk.</p>
+<h3 id="Create-dirs"><a href="#Create-dirs" class="headerlink" title="Create dirs"></a>Create dirs</h3><p>To install a new recipe and/or tool, you need to ensure there is an appropriate dir structure expected by Pagehop.</p>
+<p>In your user dir, there should be a dir named <em>.pagehop</em> with 2 subdirs, like this:</p>
+
+<figure class="highlight"><pre>~
+	.pagehop
+		recipes
+		tools</pre></figure>
+
+<p>In other words, you need to create these 2 dirs:</p>
+<p><code>~/.pagehop/recipes/</code></p>
+<p><code>~/.pagehop/tools/</code></p>
+<p>The above paths are relative to your user directory. For example if your user is named “johndoe”, the absolute path to the 3rd party recipes would be:</p>
+<p><code>/Users/johndoe/.pagehop/recipes/</code></p>
+<h3 id="Copy-recipe-tool"><a href="#Copy-recipe-tool" class="headerlink" title="Copy recipe/tool"></a>Copy recipe/tool</h3><p>The 2nd and final step is to copy the recipe/tool in the dir you just made sure exists (<code>.../.pagehop/recipes/</code> or <code>.../.pagehop/tools/</code>).</p>
+<p>It has to be in a directory - <strong>don’t copy just files there</strong>. For example if you want to install <em>the new IMDB recipe</em>, at the end, your recipe will be in the dir:</p>
+<p><code>~/.pagehop/recipes/imdb/</code></p>
+<h3 id="Newer-versions-override-older-ones"><a href="#Newer-versions-override-older-ones" class="headerlink" title="Newer versions override older ones"></a>Newer versions override older ones</h3><p>But only in the cache.</p>
+<p>Pagehop <em>compiles</em> recipes and tools and caches them. It’s more like it <em>combines</em> them with dependencies, so recipes and tools become independent entities, which can be directly executed.</p>
+<p>When you install a newer version of a recipe, which already is in the default set (comes with Pagehop’s installation), it gets overriden in the cache.</p>
+<h4 id="Revert-to-older-version"><a href="#Revert-to-older-version" class="headerlink" title="Revert to older version"></a>Revert to older version</h4><p>To revert to an older version, you need to delete the new recipe/tool from <code>~/.pagehop/</code> and to delete Pagehop’s cache, located here:</p>
+<p><code>~/Library/Application Support/Pagehop/cache/</code></p>
+<p>Finally, log-off + log-in or restart your computer so the cache is redone.</p>
+<h2 id="The-pagehop-CLI-tool-will-be-helping-with-this"><a href="#The-pagehop-CLI-tool-will-be-helping-with-this" class="headerlink" title="The pagehop CLI tool will be helping with this"></a>The pagehop CLI tool will be helping with this</h2><p>The process of installing a recipe or tool isn’t too hard, but still can be made a lot easier with a CLI tool, you can use in the Terminal.</p>
+<p>Sometime during v1’s (Pagehop 1.x.x’s) lifecycle, we plan to release a new version of the pagehop CLI tool to help you install recipes and tools from the public repositories in Github.</p>
+
+      </div>
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2015-01-06T17:43:23.000Z" itemprop="dateModified">Last updated: Jan 6 2015</time>
+        <a href="/quick-info/" id="page-footer-prev" title="Quick Info">Prev</a><a href="/development-overview/" id="page-footer-next" title="Overview">Next</a>
+      </footer>
+      
+    </div>
+    <aside id="sidebar">
+  
+    <strong class="sidebar-title">How to use</strong>
+    
+      <a href="/" class="sidebar-link">Install</a>
+    
+      <a href="/overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/register-with-license-key/" class="sidebar-link">Register with License-key</a>
+    
+      <a href="/search/" class="sidebar-link">Search</a>
+    
+      <a href="/page-hopping/" class="sidebar-link">Page-hopping</a>
+    
+      <a href="/docs-browsing/" class="sidebar-link">Docs Browsing</a>
+    
+      <a href="/reading-news/" class="sidebar-link">Reading News</a>
+    
+      <a href="/quick-info/" class="sidebar-link">Quick Info</a>
+    
+      <a href="/3rd-party-recipes-and-tools/" class="sidebar-link current">3rd party Recipes and Tools</a>
+    
+  
+    <strong class="sidebar-title">Development</strong>
+    
+      <a href="/development-overview/" class="sidebar-link">Overview</a>
+    
+      <a href="/ecma-script/" class="sidebar-link">ECMAScript</a>
+    
+      <a href="/external-dependencies/" class="sidebar-link">External Dependencies</a>
+    
+  
+    <strong class="sidebar-title">Develop Recipes</strong>
+    
+      <a href="/scaffold-recipe/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-recipe/" class="sidebar-link">package.json</a>
+    
+      <a href="/page-loop-js/" class="sidebar-link">page-loop.js</a>
+    
+      <a href="/scrape-js/" class="sidebar-link">scrape.js</a>
+    
+      <a href="/testing-recipes/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Develop Tools</strong>
+    
+      <a href="/scaffold-tool/" class="sidebar-link">Scaffold</a>
+    
+      <a href="/package-json-tool/" class="sidebar-link">package.json</a>
+    
+      <a href="/tool-js/" class="sidebar-link">tool.js</a>
+    
+      <a href="/testing-tools/" class="sidebar-link">Testing</a>
+    
+  
+    <strong class="sidebar-title">Used Software</strong>
+    
+      <a href="/used-software/" class="sidebar-link">Licenses</a>
+    
+  
+    <strong class="sidebar-title">Misc</strong>
+    
+      <a href="/releases/" class="sidebar-link">Release History</a>
+    
+      <a href="/faq/" class="sidebar-link">F.A.Q.</a>
+    
+  
+</aside>
+  </div>
+</article>
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright &copy; <a href="http://universless.com">Universless Ltd.</a> 2015-2018</span>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline social-buttons">
+					<li><a href="http://twitter.com/pagehopapp"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a href="http://facebook.com/pagehop"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li><a href="mailto:support@pagehopapp.com"><i class="fa fa-envelope"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="list-inline quicklinks">
+					<li>
+						<a href="#" data-target="#privacyPolicyModal" data-keyboard="true" data-toggle="modal">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#" data-target="#eulaModal" data-keyboard="true" data-toggle="modal">EULA</a>
+					</li>
+					<li>
+						<a href="http://pagehopapp.com/press">Press</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Modals -->
+<!-- PrivacyPolicy Modal -->
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>Privacy Policy</h1>
+
+						<h2>The information you provide to us</h2>
+						<p>We take your privacy seriously. When you provide us with any personal information, we do our best to keep it safe. We will not share your personal information with third-parties other than our payment gateway and will take all reasonable precautions to protect it.</p>
+
+						<p>Braintree Payments (our payment gateway) will be the only party receiving your payment data in case you purchase a license for Pagehop. Our servers will not receive any of this data, other than your email, your name and the text of your License Key (the one you receive through email upon purchase) in order to be able to resend you your License Key in case it's lost. Universless Ltd. is not and will not be responsible nor held liable for any security issues that Braintree Payments gateway has or will have in future.</p>
+
+						<h2>Tracking and cookies</h2>
+						<p>To help us understand how we can make Pagehop's website better, we use Google Analytics on pagehopapp.com, as well as on api.pagehopapp.com.</p>
+
+						<p>This information is anonymous and does not provide us with identifiable information, but helps us ensure that our documentation pages answer all of the most popular questions correctly, for example.</p>
+
+						<hr style="width:60%">
+						<i>
+							<p>By using the websites owned by Universless Ltd. (including pagehopapp.com, www.pagehopapp.com and api.pagehopapp.com), you agree to the Privacy Policy above.</p>
+
+							<p>If you have any questions about our privacy policy, please contact us on support@pagehopapp.com.</p>
+						</i>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- EULA Modal -->
+<div class="modal fade" id="eulaModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h1>End-user license agreement (EULA)</h1>
+
+						<p>The SOFTWARE PRODUCT (PAGEHOP) is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.
+						</p>
+						<ol>
+							<li>LICENSES<br>
+							PAGEHOP is licensed as follows:
+
+								<ol type="a">
+									<li>Installation and Usage.<br>
+										Licenses are per user and valid for use on all supported operating systems. License keys may be used on multiple computers and operating systems, provided the license key holder is the primary user.
+									</li>
+									<li>Backup Copies.<br>
+										You may make copies of the license key and or PAGEHOP for backup and archival purposes.
+									</li>
+								</ol>
+
+							</li>
+							<li>DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+								<ol type="a">
+									<li>Maintenance of Copyright Notices.<br>
+										You must not remove or alter any copyright notices on any copy of PAGEHOP.
+									</li>
+									<li>Distribution.<br>
+										You may not distribute or sell license keys or PAGEHOP to third parties. Licenses will be revoked if distributed or sold to third parties.
+									</li>
+									<li>Rental.<br>
+										You may not rent, lease, or lend the license key or PAGEHOP.
+									</li>
+								</ol>
+
+							</li>
+							<li>COPYRIGHT<br>
+								All title, including but not limited to copyrights, in and to PAGEHOP and any copies thereof are owned by UNIVERSLESS LTD.
+							</li>
+							<li>NO WARRANTIES<br>
+								UNIVERSLESS LTD expressly disclaims any warranty for PAGEHOP, which is provided 'as is' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, non-infringement, or fitness of a particular purpose.
+
+							</li>
+							<li>REFUNDS<br>
+								Refunds are available within 10 days of purchasing. Please send us an email (support@pagehopapp.com) if you wish to claim a refund. Refund can't be claimed after the first 10 days.
+							</li>
+							<li>LIMITATION OF LIABILITY<br>
+								In no event shall UNIVERSLESS LTD be liable for any damages due to use of PAGEHOP, to the maximum extent permitted by law. This includes without limitation, lost profits, business interruption, or lost information. In no event will UNIVERSLESS LTD be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages. UNIVERSLESS LTD shall have no liability with respect to the content of PAGEHOP or any part thereof, including but not limited to errors or omissions contained therein, libel, trademark rights, business interruption, loss of privacy or the disclosure of confidential information.
+							</li>
+						</ol>
+						<button type="button" class="btn btn-primary pagehop-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script>
+<script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="/bower_components/classie/classie.js"></script>
+<script src="/pagehopapp-scripts/cbpAnimatedHeader.js"></script>
+
+<!-- Custom theme JavaScript -->
+<script src="/pagehopapp-scripts/main.js"></script>
+</body>
+</html>
